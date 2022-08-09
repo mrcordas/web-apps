@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'trebuchet MS', Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+header{
+    background: #294c71 url('./imagens/fundo.png');
+    height: 233px;
+    /* border:1px solid; */
+}
+
+header .container{
+    width: 750px;
+    min-height: 180px;
+    margin: 0 auto;
+    background: url(./imagens/detalhe-topo.png) no-repeat right top;
+}
+#logo{
+   padding: 25px 0;
+}
+ul{
+   
+    list-style-type: none;
+}
+header li, header ul{
+    float: left;
+}
+
+header nav{
+    overflow: hidden;
+    
+}
+header nav a {
+    display: block;
+    color:#fff;
+    text-decoration: none;
+    padding: 14px 21px;
+    background: #b10333 url('./imagens/divisor.png') no-repeat left center;
+}
+header li:first-child a{
+    background-image: none;
+}
+header nav a:hover{
+    color:#680521;
+}
+header .pag-mark a{
+    background: #f71756;
+    cursor:grab;
+}
+
+main {
+    width: 750px;
+    margin: auto;
+    /* border:1px solid; */
+}
+
+h2{
+    font-size: 1.1em;
+    background-color: #294c71;
+    color:#fff;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.box{
+    padding: 5px;
+    background-image: url('./imagens/fundo-caixa.png');
+    margin-top:10px;
+    margin-bottom: 10px;
+    /* border: 1px solid;  */
+}
+
+#dest-e-entr .box img{
+    width: 100%;
+    border: 3px solid #cfcdcd;
+    display: block;
+    /* box-sizing: border-box; */
+}
+#mundo-e-recent .box img {
+    display:block;
+    width: 80px;
+    float:left;
+    margin-right: 5px;
+}
+
+.inside-element-box {
+    padding-right: 10px;
+    padding-left: 3px; 
+    background-color: #fff;
+}
+
+#dest-e-entr .inside-element-box p:first-child {
+    text-transform: uppercase;
+    background-color: #b41e1e;
+    display: inline;  
+}
+.legis {
+    font-weight:bolder;
+    color:#fff;
+}
+#dest-e-entr .inside-element-box a{
+    color:#b10333;
+}
+
+#dest-e-entr .inside-element-box a:hover{
+    color:#e95881;
+}
+#nav-lateral ul a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid #ebe8e8;
+    
+}
+#nav-lateral ul a:hover {
+    color: #c2bcbc;
+    padding-left: 20px;
+    background: url('./imagens/marcador.png') no-repeat left center;
+}
+
+aside{
+    width: 180px; /*25*/
+    float: left;
+    /* border: 1px solid; */
+}
+#container-seccions{
+    width:560px;/*73%*/
+    float: right;
+    /* border: 1px solid; */
+}
+#home #dest-e-entr .box:first-child, #home #mundo-e-recent .box:first-child{
+    float:left;
+    /* border: 1px solid greenyellow; */
+    width: 47%;
+}
+
+#home #dest-e-entr .box:last-child, #home #mundo-e-recent .box:last-child{
+    float:right;
+    /* border: 1px solid green; */
+    width: 47%;
+}
+
+#dest-e-entr, #mundo-e-recent{
+    overflow: hidden;
+}
+
+#mundo-e-recent .inside-element-box li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 5px;
+    border-bottom: 1px solid #b6b2b2;
+    overflow: hidden;
+    color: initial;
+}
+
+#mundo-e-recent .inside-element-box li a:hover{
+    background-color: #eee;
+}
+#mundo-e-recent .inside-element-box h3{
+    text-transform: uppercase;
+    font-size: small;
+    color: #5b8abd;
+}
+
+#mundo-e-recent .inside-element-box p{
+   font-size: smaller;
+}
+
+/*form*/
+#cad-news form{
+    font-size: 1.1em;
+}
+
+#cad-news form label{
+    cursor: pointer;
+}
+#cad-news form input[type="text"]{
+    width: 80%;
+    padding:5px;
+    border: 2px inset grey;
+}
+#cad-news form input[type="submit"]{
+    padding:5px;
+    background-color: #b41e1e;
+    color: #fff;
+    border: 2px solid rgb(145, 11, 11);
+}
