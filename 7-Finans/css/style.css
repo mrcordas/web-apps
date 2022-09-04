@@ -1,0 +1,27 @@
+/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+@import url(../../../fontes/Poppins/stylesheet.css); /*font poppins */
+
+header, #sec-topo{
+    background-color: rgb(40, 152, 250);
+    color:#fff;
+}
+
+
+.section-demais{
+    padding: 60px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header nav li a:not(.btn):hover{
+    color:white !important;
+}
+
+footer .float-right img{
+    width:30px;
+}
+
+.div-img-prim {
+    min-height: 500px;
+}
+
