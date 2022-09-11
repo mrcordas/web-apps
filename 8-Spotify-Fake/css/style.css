@@ -1,0 +1,43 @@
+body{
+    background-image: url('../img/capa.png'),
+                      url('../img/ruido.png'), 
+                      linear-gradient(to right, rgb(231, 7, 131), rgb(190, 231, 7));
+    background-attachment: fixed;
+    font-family: Helvetica,Arial,sans-serif;
+    height: 100%;
+}
+
+.navbar .navbar-nav .nav-link, span{
+    color: #fff;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color:rgb(141, 222, 224);
+}
+.fixed-top{
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+html, main, #home, .d-flex{
+    height:100%;
+}
+
+.carousel-inner h1{
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.carousel-item .btn{
+    border: 2px solid #fff;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    width: 30px;
+}
+
+#spotfytem{
+    background-color: #fff;
+}
