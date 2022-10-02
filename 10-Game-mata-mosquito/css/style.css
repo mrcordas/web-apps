@@ -1,0 +1,81 @@
+html, body{
+    height: 100%;
+    cursor: url(../imgs/mata_mosca.png) 30 30, auto;
+}
+body{
+    background: url("../imgs/bg.jpg") no-repeat;
+    background-size: cover;
+    
+    overflow: hidden;
+}
+
+#alvoMosquido{
+    display: block;
+    width: 50px;
+    position: absolute;
+}
+
+#painel{
+    padding: 10px 20px 0 5px;
+    background-color: rgba(255, 255, 255, 0.623);
+    position: absolute;
+    bottom: 5px;
+    width: 230px;
+
+}
+#vidas img{
+    width: 30px;
+}
+
+#painel p{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* pagina start, restart */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.flex-item{
+    margin-bottom: 20px;
+}
+
+/* pagina start */
+select{
+    width:200px;
+    padding: 5px 10px;
+    border: 1px solid rgb(139, 139, 243);
+   
+}
+
+#pag-start input[type="submit"]{
+    background-color: rgb(211, 7, 7);
+    border: 2px solid #c50909;
+    color: rgb(228, 226, 226);
+    padding: 10px 20px;
+}
+
+#pag-start input[type="submit"]:hover{
+    background-color:rgb(202, 39, 39);
+}
+
+.result input[type="button"]{
+   background-color: rgb(36, 36, 36);
+   border:2px solid rgb(54, 54, 54);
+   color: rgb(228, 226, 226);
+   padding: 10px 40px;
+}
+.result input[type="button"]:hover{
+    background-color: rgb(51, 50, 50);
+}
+
+select, input{
+    margin: auto;
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    outline: none;
+}

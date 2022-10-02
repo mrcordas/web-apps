@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="./img/icons/favicon.png">
+    <title>Game start</title>
+
+    <!-- Bootstrap só reboot CSS -->
+    <link rel="stylesheet" href="./css/reset.min.css">
+    
+    <!-- css externos-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body id="pag-start">
+   <main>
+        <div class="container">
+            <div class="flex-item">
+                <img src="./imgs/game.png" alt="">
+            </div>
+            <div class="flex-item">
+                <form id="form-start" action="./game.html"  method="get"> <!-- importante para enviar e redirecionar-->
+                    <select name="level" id="level">                    
+                        <option value="" disabled selected>-- Level select --</option>
+                        <option value="normal">Normal</option>
+                        <option value="hard">Hard</option>
+                        <option value="extreme">Extreme</option>
+                    </select>
+                    <input type="submit" value="Start Game" onclick="start();">
+                </form>
+            </div>
+        </div>  
+   </main>
+   <footer>
+   </footer>
+
+   <script>
+        "use strict";
+        const start = ()=>{
+            const form = document.getElementById('form-start');
+            let opt = document.getElementById('level').value;
+            if(opt === ""){
+                form.removeAttribute('action');
+                alert("Selecione um nível");
+
+            }
+            // window.location.href = "./game.html";
+            //não precisou o envio de formulario ja faz
+        }
+   </script>
+</body>
+
+</html>

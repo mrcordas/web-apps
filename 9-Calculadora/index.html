@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="./img/icons/favicon.png">
+    <title>App</title>
+
+    <!-- Bootstrap só reboot CSS -->
+    <link rel="stylesheet" href="./botstrap 4.6.2/bootstrap-reboot.min.css">
+    
+    <!-- css externos-->
+    <link rel="stylesheet" href="./style.css">   
+    
+</head>
+<body>       
+    <div class="container">
+        <main>
+            <div id="app">
+                <div class="result">
+                    <input id="result" type="text" disabled>
+                </div>
+                <div class="digitos">
+                    <div>
+                        <button style="width:118px;" onmouseup = "removeclass(this);" onmousedown="calc(this, 'C');">C</button>
+                        <button>/</button>
+                        <button>x</button>
+                    </div>
+                    <div >
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>-</button>
+                    </div>
+                    <div>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>+</button>
+                    </div>
+
+                    <div class="mod">
+                        <div>
+                            <div>
+                                <button>1</button>
+                                <button>2</button>
+                                <button>3</button>
+                            </div>
+                            <div>
+                                <button style="width:118px;">0</button>
+                                <button>.</button>
+                            </div>
+                        </div>
+                        <div>
+                            <button style="height:110px;">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
