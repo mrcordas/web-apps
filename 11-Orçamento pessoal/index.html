@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="./img/icons/favicon.png">
+    <title>Orçamento - pessoal</title>
+
+    <link rel="stylesheet" href="./css/reset.min.css">
+    
+    <!-- css externos-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="" id="logo"></a>
+                <ul class = "nav-ulLink">
+                    <li><a class="nav-ativo" href="">Cadastro</a></li>
+                    <li><a href="">Consulta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Registro de nova despesa</h1>
+                <form action="">
+                    <div>
+                        <select name="ano" id="ano">
+                            <option value="">Ano</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="mes" id="mes">
+                            <option value="">mes</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" id="dia" placeholder="dia">
+                    </div>
+                    <div>
+                        <select name="tipo" id="tipo">
+                            <option value="">Tipo</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" id="descricao" placeholder="descricão">
+                    </div>
+                    <div>
+                        <input type="text" id="valor" placeholder="valor">
+                    </div>
+                    <div>
+                        <span id="add">+</span>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>

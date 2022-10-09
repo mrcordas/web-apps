@@ -1,0 +1,126 @@
+/*(geral*/
+:root{
+    --img-back-logo-dim: 50px;
+}
+ul{
+    list-style: none;
+}
+header{
+    background-color: #1d65ff;
+    color:#fff;
+    padding: 10px 0;;
+}
+.container{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+/*media queries */
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+    form{
+        grid-template-columns: 140px 140px 140px auto auto 140px auto;
+    }
+
+    form div:nth-child(4){
+        grid-column: span 4;
+    }
+    form div:nth-child(5){
+        grid-column: span 5;
+    }
+    #add{
+        margin-left: auto;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1366px) {
+    .container {
+      max-width: 1360px;
+    }
+  }
+
+/* Header */
+a#logo{
+    display: block;
+    background: url('../logo.svg') no-repeat;
+    height: var(--img-back-logo-dim);
+    width: var(--img-back-logo-dim);
+    float:left;
+}
+.nav-ulLink{
+    float:left;
+    margin: 0;
+    padding-left: 30px;
+}
+nav::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.nav-ulLink a{
+    color:#adc6fc;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.nav-ulLink  .nav-ativo{
+    color:#fff;
+}
+.nav-ulLink li{
+    float: left;
+    margin-right:15px; 
+    line-height: var(--img-back-logo-dim); 
+}
+
+/*main*/
+main h1{
+    font-size: 3em;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+form{
+    display:grid;
+    gap:10px 20px;
+    
+}
+form div input, form div select{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #bebbbb;
+    border-radius: 5px;
+    color: #636363
+}
+
+#add{
+    text-align: center;
+    display:block;
+    
+    background-color: #1d65ff;
+    width:40px;
+    height: 40px;
+    font-size: 1.5em;
+    font-weight: 900;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#add:hover{
+    cursor: pointer;
+}
