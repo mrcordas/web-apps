@@ -1,0 +1,77 @@
+/* dialogos de cadastro*/
+#dialog-background{
+    position: absolute;
+    top: 0;
+    background-color: #0000006b;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 0 10px;
+    min-width: 300px;
+}
+#dialog-box{
+    background-color: #fff;
+    border-radius: px;
+    position: relative;
+    top: -200px;
+    max-width: 500px;
+    /* min-height: 200px; */
+    margin: auto;
+  
+}
+#header-dialog{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #07c045;
+}
+
+img#close{
+    width: 20px;
+    cursor:pointer;
+}
+#description-dialog{
+    border-top: 1px solid #cfcece;
+    border-bottom: 1px solid #cfcece;
+    padding: 20px;
+}
+.footer-dialog{
+    text-align: right;
+    padding: 10px 20px;
+}
+#btnBack{
+   padding: 5px 15px;
+   background-color: #08cc4a;
+   border-width: 2px;
+   border-style:solid;
+   border-color: #07c045;
+   border-radius: 5px;
+   color: #fff;
+}
+
+/* dialogos de dicas*/
+.tip{
+    display: block;
+    position: absolute;
+    top: -50px;
+    width:max-content;
+    height: 40px;
+    background-color: rgb(75, 77, 76);
+    color:#fff;
+    box-shadow: 2px 2px 10px #000;
+    line-height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* seta*/
+.tip::after{
+    content:"";
+    display:block;
+    position: absolute;
+    border: 10px solid;
+    border-color:#4b4d4c transparent transparent transparent; 
+}

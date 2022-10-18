@@ -1,6 +1,10 @@
-/*(geral*/
+/*geral*/
 :root{
     --img-back-logo-dim: 50px;
+}
+
+body{
+    /* background-color: #e3e1f5; */
 }
 ul{
     list-style: none;
@@ -16,31 +20,40 @@ header{
     margin-right: auto;
     padding: 0 10px;
 }
+
 /*media queries */
 @media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
-  }
+}
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .container {
       max-width: 720px;
     }
     form{
-        grid-template-columns: 140px 140px 140px auto auto 140px auto;
+        /* grid-template-columns: 140px 140px 140px auto auto 140px auto; */
+        grid-template-columns: repeat(8, auto);
+        
     }
-
+    form div:nth-child(1),  form div:nth-child(2),  
+    form div:nth-child(3), form div:nth-child(6)
+    form div:nth-child(7){
+        min-width: 100px;
+        grid-column: span 1;
+        /* max-width: 150px; */
+    }
     form div:nth-child(4){
-        grid-column: span 4;
-    }
-    form div:nth-child(5){
         grid-column: span 5;
     }
-    #add{
+    form div:nth-child(5){
+        grid-column: span 6;
+    }
+    #add, #search{
         margin-left: auto;
     }
-  }
+}
   
   @media (min-width: 992px) {
     .container {
@@ -48,16 +61,16 @@ header{
     }
   }
   
-  @media (min-width: 1366px) {
+  /* @media (min-width: 1366px) {
     .container {
       max-width: 1360px;
     }
-  }
+ } */
 
 /* Header */
 a#logo{
     display: block;
-    background: url('../logo.svg') no-repeat;
+    background: url('../imgs/logo.svg') no-repeat;
     height: var(--img-back-logo-dim);
     width: var(--img-back-logo-dim);
     float:left;
@@ -87,6 +100,7 @@ nav::after{
 }
 
 /*main*/
+
 main h1{
     font-size: 3em;
     font-weight: 300;
@@ -96,7 +110,8 @@ main h1{
 
 form{
     display:grid;
-    gap:10px 20px;
+    gap:10px 30px;
+    margin-bottom: 50px;
     
 }
 form div input, form div select{
@@ -104,23 +119,51 @@ form div input, form div select{
     height: 40px;
     padding: 5px;
     border: 1px solid #bebbbb;
+    background-color: #fff;
     border-radius: 5px;
     color: #636363
 }
 
-#add{
+#add, #search, .btnDelete{
     text-align: center;
-    display:block;
-    
-    background-color: #1d65ff;
-    width:40px;
-    height: 40px;
+    display:block; 
     font-size: 1.5em;
     font-weight: 900;
     border-radius: 5px;
     color: #fff;
+   
+}
+#search, #add{
+    width:40px;
+    height: 40px;
+    padding: 10px 0;
+    background-color: #1d65ff;
+}
+#search img, .btnDelete img, #add img{
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: auto;
+}
+#add:hover, #search:hover, .btnDelete{
+    cursor: pointer;
 }
 
-#add:hover{
-    cursor: pointer;
+.btnDelete{
+    background-color: #ff1d1d;
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+}
+
+/*table consulta*/
+table{
+    width: 100%;
+}
+tr{
+    border-top: 1px solid  #bebbbb;
+}
+
+td, th{
+    padding: 10px 0;
 }

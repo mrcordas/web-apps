@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Orçamento - pessoal</title>
+    
     <link rel="shortcut icon" href="./img/icons/favicon.png">
+    <title>Orçamento - pessoal</title>
+
     <link rel="stylesheet" href="./css/reset.min.css">
     
     <!-- css externos-->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/dialog.boxes.css">
-
-    <script src="./js/dialog.boxes.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,8 +20,8 @@
             <nav>
                 <a href="" id="logo"></a>
                 <ul class = "nav-ulLink">
-                    <li><a class="nav-ativo" href="#">Cadastro</a></li>
-                    <li><a href="./consulta.html">Consulta</a></li>
+                    <li><a href="./index.html">Cadastro</a></li>
+                    <li><a class="nav-ativo" href="">Consulta</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,7 +29,7 @@
     <main>
         <div class="container">
             <div class="content">
-                <h1>Registro de nova despesa</h1>
+                <h1>Consulta de despesas</h1>
                 <form action="">
                     <div>
                         <select name="ano" id="ano">
@@ -55,17 +53,30 @@
                         </select>
                     </div>
                     <div>
-                        <input type="text" id="descricao" placeholder="descricão">
+                        <input type="text" id="descricao" disabled>
                     </div>
                     <div>
-                        <div class=""></div>
-                        <input type="text" id="valor" placeholder="valor">
+                        <input type="text" id="valor" disabled>
                     </div>
+                    
+                   
                     <div>
-                        <span id="add"><img src="./imgs/plus.svg" alt="add"></span>
+                        <span id="search"><img src="./imgs/search.svg" alt="search"></span>
                     </div>
                     
                 </form>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="despesaListTbody"></tbody>
+                </table>
             </div>
         </div>
     </main>
@@ -74,33 +85,24 @@
     <script src="./js/fillFields.js"></script>
     <script src="./js/app.js"></script>
     <script>
-        "use strict";
-        const btnAdd = document.getElementById('add');
-        try {
-            btnAdd.onclick = ()=>{
-                registration(); //defined in app.js
-            }
-        } catch (error) {
-            console.log(error); 
+        "use strict"
+        
+        document.body.onload = ()=>{
+            loadDataTable(bd.queryData()); //bd.QueryData return array localStore defined in app.js
         }
         
+        (function(){
+            const btnSearch = document.getElementById('search');
+            try {
+                btnSearch.onclick = ()=>{
+                    searchFilterData();
+                }
+            } catch (error) {
+                console.log(error); 
+            }
+        })();
+        
     </script>
-    <!-- <div id="dialog-backgroud">
-        <div id="dialog-box">
-            <div class="header-dialog">
-                <span>Erro de gravação</span>
-                <div>
-                    <img src="./Picture1.svg" id="close">
-                </div>
-            </div>
-            <div class="description">
-                <span>Existem campos obrigatórios que não foram preenchidos</span>
-            </div>
-            <div class="footer-dialog">
-                <input type="button" value="Back and fix" id="btnBack">
-            </div>        
-        </div>
-    </div> -->
    
 </body>
 </html>
