@@ -1,6 +1,6 @@
 # Orçamento Pessoal
 
-![Imagem do Projeto](https://link-para-imagem-do-projeto.com/imagem.png)
+![Orçamento](preview/app.PNG)
 
 ## Descrição
 
